@@ -1,0 +1,220 @@
+/* General Reset */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #232f3e;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    color: white;
+    font-family: Arial, sans-serif;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+}
+
+/* Logo Styling */
+.navbar-logo h1 {
+    color: #ff9900;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Search Bar Styling */
+.navbar-search {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    margin: 0 20px;
+}
+
+.search-input {
+    padding: 10px;
+    border-radius: 4px 0 0 4px;
+    border: none;
+    width: 400px;
+    outline: none;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #febd69;
+    color: black;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #f3a847;
+}
+
+/* Filter Section */
+.navbar-filters {
+    display: flex;
+    gap: 10px;
+    position: relative;
+    right: 35px;
+}
+
+/* Dropdown Styling for Sort by and Category */
+.navbar-dropdown {
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    background-color: #fff;
+    color: #232f3e;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 160px;
+    font-size: 16px;
+    margin-right: 25px;
+}
+
+.navbar-dropdown:hover {
+    background-color: #f3f3f3;
+}
+
+.navbar-dropdown:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); 
+}
+
+.navbar-dropdown option {
+    background-color: #fff;
+    color: #232f3e; 
+}
+
+/* Cart Icon Styling */
+.cart-icon {
+    position: relative;
+    right: 33px;
+    cursor: pointer;
+    font-size: x-large;
+}
+
+.cart-icon i {
+    font-size: 24px;
+    color: white;
+}
+
+.cart-icon .count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: orange;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 6px;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 992px) {
+    .search-input {
+        width: 300px;
+    }
+
+    .navbar-filters {
+        position: relative;
+        right: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .navbar-logo {
+        margin-bottom: 10px;
+    }
+
+    .navbar-search {
+        width: 100%;
+    }
+
+    .search-input {
+        width: 70%;
+        max-width: 250px;
+    }
+
+    .navbar-filters {
+        flex-direction: column;
+        margin-top: 10px;
+        position: static;
+    }
+
+    .navbar-dropdown {
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .cart-icon {
+        margin-top: 10px;
+    }
+
+    .search-button {
+        padding: 8px 16px;
+    }
+
+    .navbar-search {
+        justify-content: flex-start;
+        padding-left: 10px;
+    }
+}
+
+/* Further adjustments for smaller screens (mobile) */
+@media (max-width: 480px) {
+    .navbar-search {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .search-input {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    .search-button {
+        width: 90%;
+    }
+
+    .navbar-filters {
+        align-items: center;
+    }
+
+    .navbar-dropdown {
+        width: 90%;
+    }
+
+    .cart-icon {
+        margin-top: 10px;
+        font-size: 1.5rem;
+    }
+
+    .cart-icon .count {
+        font-size: 10px;
+        padding: 2px 4px;
+    }
+}
